@@ -1,29 +1,51 @@
 {
   "name": "jsp-webpack-plugin",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "This plugin intends for generate *.jsp file (with injected your bundles and chunks)",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
+  "files": ["lib/**/*"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AkpoFlash/jsp-webpack-plugin.git"
+    "url": "git+https://github.com/Verisimilitude/jsp-webpack-plugin.git"
   },
   "keywords": [
     "jsp",
     "webpack",
     "plugin",
     "java",
-    "html"
+    "html",
+    "typescript"
   ],
   "author": "Kirill Anisimov",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/AkpoFlash/jsp-webpack-plugin/issues"
+    "url": "https://github.com/Verisimilitude/jsp-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/AkpoFlash/jsp-webpack-plugin#readme",
+  "homepage": "https://github.com/Verisimilitude/jsp-webpack-plugin#readme",
   "dependencies": {
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.190",
+    "@types/node": "^18.11.9",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-env": "^1.18.0",
+    "prettier": "^2.8.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.3"
   }
 }
