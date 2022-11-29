@@ -1,5 +1,5 @@
 {
-  "name": "jsp-webpack-plugin",
+  "name": "jsp-webpack-plugin-with-types",
   "version": "2.0.0",
   "description": "This plugin intends for generate *.jsp file (with injected your bundles and chunks)",
   "main": "lib/index.js",

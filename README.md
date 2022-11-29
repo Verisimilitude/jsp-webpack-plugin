@@ -1,12 +1,12 @@
 # Jsp WebPack Plugin
 This plugin intends for generate *.jsp file (with injected your bundles and chunks)
-
+This is the same WebPack Plugin as https://github.com/AkpoFlash/jsp-webpack-plugin but with typescript and types
 # Install
-`npm i --save-dev jsp-webpack-plugin`
+`npm i --save-dev jsp-webpack-plugin-with-types`
 
 or
 
-`yarn add --dev jsp-webpack-plugin`
+`yarn add --dev jsp-webpack-plugin-with-types`
 
 # Usage
 
